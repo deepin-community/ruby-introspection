@@ -1,0 +1,29 @@
+Source: ruby-introspection
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Cédric Boutillier <boutil@debian.org>
+Build-Depends: debhelper (>= 11~),
+               gem2deb,
+               ruby-blankslate,
+               ruby-instantiator (>= 0.0.3~),
+               ruby-metaclass (>= 0.0.1~)
+Standards-Version: 4.3.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-introspection.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-introspection
+Homepage: https://github.com/floehopper/introspection
+XS-Ruby-Versions: all
+Testsuite: autopkgtest-pkg-ruby
+
+Package: ruby-introspection
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ruby-instantiator (>= 0.0.3~),
+         ruby-metaclass (>= 0.0.1~),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Ruby library for the inspection of method definitions on objects
+ This library allows a dynamic inspection of the hierarchy of method definitions
+ on a Ruby object. It can be used in particular to detect undesirable changes
+ to classes made by other libraries.

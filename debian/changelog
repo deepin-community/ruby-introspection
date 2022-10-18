@@ -1,0 +1,45 @@
+ruby-introspection (0.0.4-1) unstable; urgency=medium
+
+  * New upstream version 0.0.4
+  * Remove version in the gem2deb build-dependency
+  * Run wrap-and-sort on packaging files
+  * Do not depend on ruby-instantiator anymore
+  * Declare Testsuite: as autopkgtest-pkg-ruby
+  * Use salsa.debian.org in Vcs-* fields
+  * Bump debhelper compatibility level to 11
+  * Move debian/watch to gemwatch.debian.net
+  * Bump Standards-Version to 4.3.0 (no changes needed)
+  * Use modern rake method to run tests instead of yaml
+  * Update 0100_remove_rubygems_bundler_stuff.patch
+  * Drop 0200_fix_path_in_require.patch, not needed anymore
+
+ -- Cédric Boutillier <boutil@debian.org>  Mon, 07 Jan 2019 15:44:00 +0100
+
+ruby-introspection (0.0.3-1) unstable; urgency=medium
+
+  * Imported Upstream version 0.0.3
+  * debian/control:
+    + remove obsolete DM-Upload-Allowed flag
+    + use canonical URI in Vcs-* fields
+    + update my email address to @d.o
+    + bump Standards-Version to 3.9.5
+  * debian/copyright:
+    use DEP5 copyright-format/1.0 official URL for Format field
+
+ -- Cédric Boutillier <boutil@debian.org>  Thu, 24 Apr 2014 21:56:19 +0200
+
+ruby-introspection (0.0.2-2) unstable; urgency=low
+
+  * Bump build dependency on gem2deb to >= 0.3.0~
+
+ -- Cédric Boutillier <cedric.boutillier@gmail.com>  Tue, 26 Jun 2012 12:54:30 +0200
+
+ruby-introspection (0.0.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #654247)
+  * debian/patches/0100_remove_rubygems_bundler_stuff.patch: remove
+    requirements on rubygems and bundler Ruby libraries
+  * debian/patches/0200_fix_path_in_require.patch: fix relative path of
+    test_helper.rb in require statements of tests
+
+ -- Cédric Boutillier <cedric.boutillier@gmail.com>  Fri, 30 Dec 2011 16:14:56 +0100
